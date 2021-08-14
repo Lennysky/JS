@@ -1,0 +1,36 @@
+<input value ='hello, it-kamasutra' class='hello-message input' id='hello-message'/>
+
+<h1>Пикап</h1>
+
+<ul>
+    <li>Подстричься</li>
+    <li>Подстринься</li>
+    <li>Выучить пару шуток</li>
+    <li>Приодеться</li>
+    <li>Выучить пару шуток</li>
+    <li>Подойти к девушке</li>
+    <li>Сказать привет</li>
+    <li>Рассказать пару шуток</li>
+    <li>Взять номер телефона</li>
+</ul>
+
+<script>
+    var helloMessageElement; //ручка, создали переменную helloMessageElement
+    var helloMessageId; // ручка, создали переменную helloMessageId
+       
+    //присвоили строку, т.е. ухватились переменной за строку, теперь у нас здесь строка, т.к. айдишка - строка, как класс, как value - строковое значение, объект строки
+    helloMessageId = 'hello-message'; 
+    //просим документ вернуть элемент по айдишке. Айдишку передаем в скобочки. Айдишка - это ручка, которая ухватилась за объект 'hello-message'
+    //т.е. когда документ будет искать объект, он уже залезет внутрь ручки и вытянет оттуда нужный объект. Но не на самом HTML будет искать объект, а в этом междумирье с душами.
+
+    //есть переменная helloMessageElement, которой мы говорим, чтобы она присвоила то значение, которое вернет выполнение кода справа.
+    //т.е. выражение справа в какой-то момент станет самим тэгом и мы быстро-быстро цепляем ручку к этому элементу.
+    helloMessageElement = document.getElementById(helloMessageId);
+
+  
+     
+    window.alert(helloMessageElement.value);
+    window.alert(helloMessageElement.id);
+    window.alert(helloMessageElement.className);
+
+</script>

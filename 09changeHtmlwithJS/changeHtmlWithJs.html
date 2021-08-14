@@ -1,0 +1,73 @@
+<input value="Elena" title='Enter your name' class="first-name default-input" id="first-name" />
+<input value="Ekhin" class="last-name default-input" id="last-name" />
+<input value="Simpheropol" class="address-input default-input error-input" id="address" />
+
+<select id="cities">
+    <option>Kiev</option>
+    <option>Minsk</option>
+    <option selected='selected'>Moscow</option>
+</select>
+
+<textarea id="success-statement">Я очень качественно и вовремя выполнила задание по сервисам амбассадора (до этой Пт.)</textarea>
+<textarea id="hobbies">Программирование, спорт, ЗОЖ</textarea>
+
+<div id = 'avaWrapper'>
+    <img id = 'path-to-ava' src='https://sun9-47.userapi.com/impf/c638622/v638622832/231b2/gvOPp8dNKCI.jpg?size=2560x1709&quality=96&sign=7bfe3fba45c78c9d127d21d860db54e9&type=album' alt='Lenko'/>
+</div>
+
+<script>
+    // определеяем 2 переменные
+    //присваиваем переменной строу-айдишку, которую нужно найти в html
+    var firstNameId  = 'first-name';
+    // находим элемент по айдишнику и результат (найденный элемент) присваиваем переменной firstNameEl
+    var firstNameEl = document.getElementById(firstNameId);
+    var lastNameId = 'last-name';
+    var lastNameEl = document.getElementById(lastNameId);
+    var addressId = 'address';
+    var addressEl = document.getElementById(addressId);
+    var citiesId = 'cities';
+    var citiesEl = document.getElementById(citiesId); 
+    var successStatementId = 'success-statement';
+    var successStatementEl = document.getElementById(successStatementId); 
+    var hobbiesId = 'hobbies';
+    var hobbiesEl = document.getElementById(hobbiesId);
+    var avaWrapperId = 'avaWrapper';
+    var avaWrapperEl = document.getElementById(avaWrapperId);
+    var pathToAvaId = 'path-to-ava';
+    var pathToAvaEl = document.getElementById(pathToAvaId);
+    
+    
+
+    //если тому, что слева присваивается то, что справа от оператоора присваивания = 
+    //то это значит, что firstNameEl.value приобретет новое значение 'Andrew'
+    firstNameEl.value = 'Andrew';
+    //чтобы в браузере в inspect code выдало тоже значение Kamasutra. Так по умолчанию там показывает старое занчение только в коде. В браузере норм.
+    lastNameEl.setAttribute ('value', 'Kamasutra');
+
+    //lastNameEl.className = 'temp';
+
+    //window.alert(lastNameEl.className);
+    lastNameEl.className = 'last-name default-input error-input';
+    lastNameEl.title = 'Wrong last name'
+    pathToAvaEl.src = 'https://sun9-9.userapi.com/impg/u27ARUnNKawt67Y0c5EVfP5RJT26Ijdw9u3klA/g7l7zMc3EFw.jpg?size=1215x2160&quality=96&sign=b5f14f73f7e2cf490dd19f66c9690796&type=album';
+    pathToAvaEl.title = 'Happy Lenko';
+    citiesEl.value = 'Minsk2';
+    hobbiesEl.value = 'Hey! I have a lot of interests'
+    avaWrapperEl.innerHTML = '<ul id = "list"><li>1</li><li>2</li></ul>';
+
+    var listId = 'list';
+    var numberList = document.getElementById(listId);
+
+    window.alert(numberList.innerHTML);
+
+</script>
+
+<style>
+    .default-input{
+        border:green 5px solid;
+        padding: 5px; 
+    }
+    .error-input{
+        border-color:red;
+    }
+</style>
